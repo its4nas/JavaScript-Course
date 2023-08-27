@@ -4,42 +4,97 @@
 <title> JavaScript HomeWork </title>  
 
 <script src="JavaScript.js"></script>
-
+<style>  
+#clear{  
+width: 270px;  
+border: 3px solid gray;  
+    border-radius: 3px;  
+    color: white;
+    padding: 20px;  
+    background-color: rgb(255, 99, 99);  
+}
+#clear:hover
+{
+    background-color: red;
+}  
+  
+.formstyle  
+{  
+width: 300px;  
+height: 530px;  
+margin: auto;  
+border: 3px solid skyblue;  
+border-radius: 5px;  
+padding: 20px;  
+}  
+  
+button
+{
+    width: 40px;
+    margin: 0px 15px 10px 12px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: aquamarine;
+}
+  
+input  
+{  
+width: 20px; 
+border: 3px solid gray;  
+    border-radius: 5px;  
+    padding: 26px;  
+    margin: 5px;  
+    font-size: 15px;  
+}  
+  
+  
+#calc{  
+width: 250px;  
+border: 5px solid black;  
+    border-radius: 3px;  
+    padding: 20px;  
+    margin: auto;  
+}  
+  
+</style>  
+  
 </head>  
 <body>
-    <form name = "form1">  
-            
+    <div class= "formstyle">  
+        <form name = "form1">  
                 
-        <input id = "calc" type ="text" readonly name = "answer"> <br> <br>  
-        
-        <button type = "button" value = "1" onclick = myFunction(1)>1</button>
-        <button type = "button" value = "2" onclick = myFunction(2)>2</button>
-        <button type = "button" value = "3" onclick = myFunction(3)>3</button>  
+                 
+            <input id = "calc" type ="text" readonly name = "answer"> <br> <br>  
             
-        <br> <br>
-        <button type = "button" value = "4" onclick = myFunction(4)>4</button>  
-        <button type = "button" value = "5" onclick = myFunction(5)>5</button>  
-        <button type = "button" value = "6" onclick = myFunction(6)>6</button>  
-            
-        <br> <br>
-        <button type = "button" value = "7" onclick = myFunction(7)>7</button>  
-        <button type = "button" value = "8" onclick = myFunction(8)>8</button>  
-        <button type = "button" value = "9" onclick = myFunction(9)>9</button>  
+            <button type = "button" value = "1" onclick = myFunction(1)>1</button>
+            <button type = "button" value = "2" onclick = myFunction(2)>2</button>
+            <button type = "button" value = "3" onclick = myFunction(3)>3</button>  
+             
+            <br> <br>
+            <button type = "button" value = "4" onclick = myFunction(4)>4</button>  
+            <button type = "button" value = "5" onclick = myFunction(5)>5</button>  
+            <button type = "button" value = "6" onclick = myFunction(6)>6</button>  
+             
+            <br> <br>
+            <button type = "button" value = "7" onclick = myFunction(7)>7</button>  
+            <button type = "button" value = "8" onclick = myFunction(8)>8</button>  
+            <button type = "button" value = "9" onclick = myFunction(9)>9</button>  
 
-        <br><br>
-        <button type = "button" value = "+" onclick = "form1.answer.value += '+' ">+</button>   
-        <button type = "button" value = "*" onclick = "form1.answer.value += '*' ">*</button>
-        <button type = "button" value = "/" onclick = "form1.answer.value += '/' ">/</button>
-        <button type = "button" value = "-" onclick = "form1.answer.value += '-' ">-</button>   
-        <br> <br>  
+            <br><br>
+            <button type = "button" value = "+" onclick = "form1.answer.value += '+' ">+</button>   
+            <button type = "button" value = "*" onclick = "form1.answer.value += '*' ">*</button>
+            <button type = "button" value = "/" onclick = "form1.answer.value += '/' ">/</button>
+            <button type = "button" value = "-" onclick = "form1.answer.value += '-' ">-</button>   
+            <br> <br>  
 
-        <button type = "button" value = "." onclick = "form1.answer.value += '.' ">.</button>
-        <button type = "button" value = "0" onclick = myFunction(0)>0</button>  
-        <button type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">=</button>
-        <br> <br>  
-        <button type = "button" value = "Clear All" onclick = "form1.answer.value = ' '" id= "clear" >Clear</button>  
-        <br>   
-            
-    </form>   
+            <button type = "button" value = "." onclick = "form1.answer.value += '.' ">.</button>
+            <button type = "button" value = "0" onclick = myFunction(0)>0</button>  
+            <button type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">=</button>
+            <br> <br>  
+            <button type = "button" value = "Clear All" onclick = "form1.answer.value = ' '" id= "clear" >Clear</button>  
+            <br>   
+                
+        </form>  
+    </div>  
 </body>  
 </html> 
