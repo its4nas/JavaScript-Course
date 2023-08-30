@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <style>
+        button
+        {
+            height: 100px;
+        }
+    </style>
+    <script>
+        function play(color)
+        {
+            onclick=document.getElementById('button').innerHTML = color + " Sound"
+            return color
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;" id="button"></h1>
+    <div style="margin: 20%;">
+        <ul style="display: inline-flex; list-style-type: none;">
+            <li><div>
+                
+                <button type="button" style="color: white; background-color: red;" onclick="play('Red')">Red</button>
+            </div></li>
+            <li><div>
+                <button type="button" style="color: white; background-color: green;" onclick="play('Green')">Green</button>
+            </div></li>
+            <li><div>
+                <button type="button" style="color: white; background-color: blue;" onclick="play('Blue')">Blue</button>
+            </div></li>
+            <li><div>
+                <button type="button" style="color: black; background-color: yellow;" onclick="play('Yellow')">Yellow</button>
+            </div></li>
+        </ul>
+    </div>
+</body>
+</html>
