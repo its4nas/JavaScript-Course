@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <script src="StopWatch.js" defer></script>
-
-    <title>StopWatch</title>
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="title">StopWatch</div>
-    <div class="stopwatch">
-        <div class="display">00 : 00 : 00 : 00</div>
+    <div class="container">
+        <div class="timer-display">
+            00 : 00 : 00 : 000
+        </div>
+        <div>
+            <h2 id="round_print"></h2>
+        </div>
         <div class="buttons">
-            <button type="button" class="start">Start</button>
-            <button type="button" class="pause">Pause</button>
-            <button type="button" class="reset">Reset</button>
-            <button type="button" class="round">Round</button>
+            <button id="start-timer">Start</button>
+            <button id="pause-timer">Pause</button>
+            <button id="reset-timer">Reset</button>
+            <button id="round">Round</button>
         </div>
     </div>
-    <div>
-        <h2 id="round"></h2>
-    </div>
+
+    <script src="StopWatch.js"></script>
 </body>
 </html>

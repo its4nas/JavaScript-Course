@@ -1,53 +1,54 @@
-var [ milseconds, seconds, minutes, hours ] = [0,0,0,0];
-var display = document.querySelector('.display')
-var stopwatch = null;
-const start = document.querySelector('.start')
-const pause = document.querySelector('.pause')
-const reset = document.querySelector('.reset')
-const Round = document.querySelector('.round')
+let [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+let timeRef = document.querySelector(".timer-display");
+let int = null;
 
-start.addEventListener('click', () => {
-    if(stopwatch!==null){
-        clearInterval(stopwatch)
+document.getElementById("start-timer").addEventListener("click", () => {
+    if(int !== null) {
+        clearInterval(int);
     }
-    stopwatch = setInterval(startButton, 10);
-})
+    int = setInterval(displayTimer, 10);
+});
 
-pause.addEventListener('click', () => {
-    clearInterval(stopwatch)
-})
+document.getElementById("pause-timer").addEventListener("click", () => {
+    clearInterval(int);
+});
 
-reset.addEventListener('click', () => {
-    [ seconds, minutes, hours ] = [0, 0, 0]
-    document.querySelector('.display').innerHTML = '00 : 00 : 00 : 00'
-    clearInterval(stopwatch)
-})
+document.getElementById("reset-timer").addEventListener("click", () => {
+    clearInterval(int);
+    [milliseconds, seconds, minutes, hours] = [0, 0, 0, 0];
+    timeRef.innerHTML = "00 : 00 : 00 : 000 ";
+}); 
 
-function startButton(){
-    milseconds+=1
-    if (milseconds == 100) {
-        milseconds = 0
-        seconds++
 
-        if(seconds == 60){
-            seconds = 0
-            minutes++
-    
-            if(minutes == 60){
-                minutes = 0
-                hours++
+function displayTimer() {
+    milliseconds += 10;
+    if(milliseconds == 1000) {
+        milliseconds = 0;
+        seconds++;
+        if(seconds == 60) {
+            seconds = 0;
+            minutes++;
+            if(minutes == 60) {
+                minutes = 0;
+                hours++;
             }
         }
     }
 
-    var h = hours < 10 ? "0" + hours : hours
-    var m = minutes < 10 ? "0" + minutes : minutes
-    var s = seconds < 10 ? "0" + seconds : seconds
-    var ms = milseconds < 10 ? "0" + milseconds : milseconds
+    let h = hours < 10 ? "0" + hours : hours;
+    let m = minutes < 10 ? "0" + minutes : minutes;
+    let s = seconds < 10 ? "0" + seconds : seconds;
+    let ms = 
+        milliseconds < 10
+        ? "00" + milliseconds
+        : milliseconds < 100
+        ? "0" + milliseconds
+        : milliseconds;
 
-    display.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`
+    timeRef.innerHTML = `${h} : ${m} : ${s} : ${ms}`;
 
-    Round.addEventListener('click', () => {
-        document.getElementById('round').innerHTML = ` ${h} : ${m} : ${s} : ${ms}`
+    document.getElementById("round").addEventListener("click", ()=> {
+        document.getElementById('round_print').innerHTML = `${h} : ${m} : ${s} : ${ms}`;
     })
+
 }
